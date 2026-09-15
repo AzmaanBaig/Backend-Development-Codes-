@@ -1,103 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>
-        hello</h1>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
-<!-- <script>let students=[ {
-            name: "A", marks: 80,
-        }
-        
-        ,
-        {
-            name: "B", marks: 40,
-        }
-        
-        ,
-        {
-            name: "C", marks: 90,
-        }
-        
-        ,
-        {
-            name: "D", marks: 70,
-        }
-        
-        ,
-        {
-            name: "E", marks: 50,
-        }
-        
-        ,
-        {
-            name: "F", marks: 76,
-        }
-        
-        ,
-        {
-            name: "G", marks: 30
-        }
-        
-        ] let x=students.filter((student)=> {
-            return student.marks > 50
-        }
-        
-        ) let y=students.filter((student)=> {
-            return student.marks < 50
-        }
-        
-        ) console.log(x) console.log(y) </script>-->
-<!-- <script>let array=[80,
-        90,
-        70,
-        85] function newFatherPromise(arr) {
-            return new Promise((res, rej)=> {
-                const average=arr.reduce((acc, curr)=> {
-                    return acc + curr
-                }
-                , 0) / arr.length setTimeout(()=> {
-                    if (average >=75) {
-                        res("Congrats! i will gift you a PS5!")
-                    }
-                    else {
-                        rej("Sorry! Better luck next time, no bikes")
-                    }
-                }
-                , 2000)
-            }
-            )
-        }
-        
-        newFatherPromise(array).then((data)=> {
-            console.log(data)
-        }
-        
-        ).catch((error)=> {
-            console.log(error)
-        }
-        
-        ) </script>-->
-<!-- <script>let array=[1,
-        2,
-        3,
-        4,
-        5,
-        ] const x=array.filter((array)=> (array % 2===0)) .reduce((curr, prev)=> curr + prev) </script>-->
-<script>
-    async function fetchdata() {
-        constx = await fetch('https://jsonplaceholder.typeicode.com/posts') console.log(x) const data = x.json() console.log(data)
-    }
-
-    async function x() {
-        let res = await x console.log(x)
-    }
-</script>
