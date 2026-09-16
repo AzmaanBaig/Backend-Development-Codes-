@@ -13,14 +13,30 @@
 
 </html>
 
-<script>
-    const socket = new WebSocket('https://localhost:3000');
-    socket.onopen = () => {
-        console.log('Connected to the server');
-        socket.send('Hi');
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    socket.onmessage = (event) => {
-        console.log(`Message From Server: ${event.data}`);
-    }
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+</head>
+
+<body>
+
+    <script>
+        const socket = new WebSocket('ws://localhost:3000');
+
+        socket.onopen = () => {
+            console.log('Connected to the server');
+            socket.send('Kasie Ho Server');
+        };
+
+        socket.onmessage = (event) => {
+            console.log(`Message From Server: ${event.data}`);
+        };
+
+        socket.onerror = (error) => {
+            console.log('WebSocket Error:', error);
+        };
+    </script>
