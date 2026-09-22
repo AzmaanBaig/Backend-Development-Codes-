@@ -1,0 +1,11 @@
+{
+    "name": "student-file-assignment",
+    "version": "1.0.0",
+    "description": "Node.js File System assignment",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "Azmaan Baig",
+    "license": "ISC"
+}
