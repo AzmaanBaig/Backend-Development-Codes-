@@ -26,7 +26,6 @@ fs.writeFile(studentFile, studentData, (err) => {
         console.log("\nStudent Information:");
         console.log(data);
 
-        // Task 3: Update Student Information
         const additionalData = `
 Experience: 1 Year
 City: Kolkata`;
@@ -39,24 +38,39 @@ City: Kolkata`;
 
             console.log("\nData updated successfully");
 
-            // Task 4: Rename File
-            fs.rename(studentFile, renamedFile, (err) => {
+
+            fs.readFile(studentFile, "utf8", (err, data) => {
                 if (err) {
-                    console.log("Error renaming file:", err);
+                    console.log("Error reading updated file:", err);
                     return;
                 }
 
-                console.log("File renamed successfully to studentDetails.txt");
+                console.log("\nUpdated Student Information:");
+                console.log(data);
 
 
-                fs.unlink(renamedFile, (err) => {
+                fs.rename(studentFile, renamedFile, (err) => {
                     if (err) {
-                        console.log("Error deleting file:", err);
+                        console.log("Error renaming file:", err);
                         return;
                     }
 
-                    console.log("File deleted successfully");
-                    console.log("All file operations completed successfully.");
+                    console.log(
+                        "File renamed successfully to studentDetails.txt"
+                    );
+
+                    // Task 5: Remove File
+                    fs.unlink(renamedFile, (err) => {
+                        if (err) {
+                            console.log("Error deleting file:", err);
+                            return;
+                        }
+
+                        console.log("File deleted successfully");
+                        console.log(
+                            "All file operations completed successfully."
+                        );
+                    });
                 });
             });
         });
